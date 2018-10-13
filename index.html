@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Invie - tus mejores guitarras!!</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Allerta" rel="stylesheet">
+  <link rel="stylesheet" href="css/invie.css" />
+  <!-- NOTE: Media queries: Consultas al estado de los medios, por ejemplo al estado de la pantalla del dispositivo en el cual se esta reproduciendo nuestro sitio.
+    Hay 2 formas de agregar o declarar media-queries:
+
+    1. Mediante una hoja de estilos externa que se llame cuando ocurra la condicion que nosotros le pongamos al mediaquerie, mediante el atributo media:
+
+    <link rel="stylesheet" media="(max-width: 800px)" href="css/media-querie.css">
+
+    2. O dentro del CSS, por ejemplo dentro de la hoja de estilos invie.css:
+
+    Se declaran con @media luego yo le puedo decir opcionalmente para que tipo de medio quiero ejecutar este media-querie Lista de medios: https://developer.mozilla.org/es/docs/Web/CSS/@media#Media_types por ejemplo un media print que seria el tipo de media-querie que se ejecutaria cuando yo quisiera imprimir la pantalla. Aunque para este ejemplo vamos a usar screen. Y a parte le tengo que decir con and la condicion que quiero que se cumpla para que se ejecute el mediaquerie que en este caso es max-width. Y entre llaves le digo lo que yo quiero que pase, por ejemplo:
+
+    @media screen and (max-width: 800px) {
+    body {
+    background: peru;
+    border: 15px solid skyblue;
+  }
+  } -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+  <section id="portada" class="portada background">
+    <header id="header" class="header contenedor">
+      <figure class="logotipo">
+        <!-- FIXME: La imagen invie3x esta mal exportada para esta densidad, exportarla bien y cambiarla en el srcset o hay algun error en el codigo-->
+        <img src="images/invie.png" srcset="images/invie2x.png 2x, images/invie2x.png 3x" alt="Invie Logotipo" width="186" height="60" />
+      </figure>
+      <span class="burguer-button icon-menu" id="burguer-button"></span>
+      <nav class="menu" id="menu">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="#guitarras">Guitarras</a>
+          </li>
+          <li>
+            <a href="precios.html">Precios</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="contenedor">
+      <h1 class="titulo">Guitarras <span>Invie</span>sibles</h1>
+      <h3 class="title-a">Sé la estrella de rock que siempre quisiste ser</h3>
+      <a class="button" href="#guitarras">Conoce más</a>
+    </div>
+  </section>
+  <section id="guitarras" class="guitarras contenedor">
+    <h2>Nuestras Guitarras</h2>
+    <div class="video-demo">
+      <div class="video-responsive-contenedor">
+        <iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY?rel=0"
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>  
+    <!-- <video src="video/320x240.ogg"></video> -->
+    <article class="guitarra">
+      <!-- FIXME: La imagen 2x esta mal exportada se ve mas grande o hay algo en el codigo:  <img class="derecha" data-src="images/invie-acustica.png|images/invie-acustica2x.png" alt="Guitarra Invie Acustica" width="350" /> -->
+      <img class="derecha" data-src="images/invie-acustica.png" alt="Guitarra Invie Acustica" width="350" />
+      <div class="contenedor-guitarra-a">
+        <h3 class="title-b">Invie Acústica</h3>
+        <ol>
+          <li>Estilo Vintage</li>
+          <li>Madera pura</li>
+          <li>Incluye estuche invisible de alumnio</li>
+        </ol>
+      </div>
+    </article>
+    <article class="guitarra b">
+      <img class="izquierda" data-src="images/invie-classic.png|images/invie-classic2x.png" alt="Guitarra Invie Classic"
+        width="350" />
+      <div class="contenedor-guitarra-b">
+        <h3 class="title-b">Invie Classic</h3>
+        <ol>
+          <li>Estilo Vintage</li>
+          <li>Liviana</li>
+          <li>Inicia tu camino como Rockstar</li>
+        </ol>
+      </div>
+    </article>
+  </section>
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="contacto">
+        <img data-src="images/invie-white.png|images/invie-white2x.png" alt="Logotipo Blanco">
+        <a href="tel:67900860"><strong>Teléfono</strong><span> 67900860</span></a>
+        <a href="mailto:contacto@invie.com"><strong>E-mail</strong><span> contacto@invie.com</span></a>
+      </div>
+      <form class="formulario">
+        <div class="col1">
+          <label for="nombre">Nombre</label>
+          <input type="text" required id="nombre" name="nombre">
+          <label for="email">E-mail</label>
+          <input type="email" required id="email" name="email">
+          <div class="sexo">
+            <label for="mujer">
+              <input type="radio" id="mujer" checked name="sexo" value="mujer"> Mujer
+            </label>
+            <label for="hombre">
+              <input type="radio" id="hombre" name="sexo" value="hombre"> Hombre
+            </label>
+          </div>
+          <div class="intereses">
+            <label for="cotizacion">
+              <input type="checkbox" id="cotizacion" checked name="intereses" value="cotizacion"> Cotización
+            </label>
+            <label for="reclamos">
+              <input type="checkbox" id="reclamos" name="intereses" value="reclamos"> Reclamos
+            </label>
+            <label for="comentarios">
+              <input type="checkbox" id="comentarios" name="intereses" value="comentarios"> Comentarios
+            </label>
+            <label for="otros">
+              <input type="checkbox" id="otros" name="intereses" value="otros"> Otros
+            </label>
+          </div>
+        </div>
+        <div class="col2">
+          <label for="asunto">Asunto</label>
+          <textarea name="asunto" id="asunto" rows="7" cols="30"></textarea>
+          <input type="submit" value="Enviar" class="button">
+        </div>
+      </form>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+  <script>
+    var consulta = window.matchMedia('(max-width: 500px)');
+    consulta.addListener(mediaQuery);
+
+    var $burguerButton = document.getElementById("burguer-button");
+    var $menu = document.getElementById("menu");
+
+    function toggleMenu() {
+      $menu.classList.toggle('active');
+      document.body.classList.toggle('opened');
+      $burguerButton.classList.toggle('icon-close');
+    }
+
+    function showMenu() {
+      $menu.classList.add('active');
+      $burguerButton.classList.add('icon-close');
+    }
+
+    function hideMenu() {
+      $menu.classList.remove('active');
+      $burguerButton.classList.remove('icon-close');
+    }
+
+    function mediaQuery() {
+      if (consulta.matches) {
+        console.log("Se cumplio mi condicion");
+        $burguerButton.addEventListener('touchstart', toggleMenu);
+
+      } else {
+        console.log("No se cumplio mi condicion");
+        $burguerButton.removeEventListener('touchstart', toggleMenu);
+      }
+    }
+
+    mediaQuery();
+
+    // Lazy loading
+
+    var bLazy = new Blazy({
+      selector: 'img'
+    });
+
+    // $burguerButton.addEventListener('touchstart', toggleMenu);
+
+    // function toggleMenu() {
+    //   $menu.classList.toggle('active');
+    //   $burguerButton.classList.toggle('icon-close');
+    // }
+
+    // gestos
+
+    var $body = document.body;
+
+    var gestos = new Hammer($body);
+    
+    gestos.on('swiperight',showMenu);
+    gestos.on('swipeleft', hideMenu);
+    
+  </script>
+</body>
+
+</html>
